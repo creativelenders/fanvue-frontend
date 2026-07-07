@@ -1,0 +1,52 @@
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/jetbrains-mono/400.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-glass-border;
+  }
+
+  body {
+    @apply bg-bg-deep text-text-main font-sans antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-glass-border rounded-full hover:bg-glass-border-hover;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-glass-base border border-glass-border rounded-lg backdrop-blur-sm;
+  }
+
+  .glass-card-hover {
+    @apply glass-card hover:border-glass-border-hover transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-primary-cyan hover:bg-primary-cyan/90 text-white font-medium 
+           rounded-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply px-3 py-1.5 text-sm text-text-muted hover:text-text-main hover:bg-glass-light 
+           rounded-md transition-all duration-200;
+  }
+}
