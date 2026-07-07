@@ -102,14 +102,14 @@ export function FlowBuilderView() {
   const { data: flow, isLoading, error, refetch } = useFlow(workspaceId, id || "");
   const updateMutation = useUpdateFlow();
 
-  const [nodes, setNodes, onNodesChange] = useNodesState([]);
-  const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+  const [nodes, setNodes, onNodesChange] = useNodesState<any>([]);
+  const [edges, setEdges, onEdgesChange] = useEdgesState<any>([]);
 
   useEffect(() => {
     if (flow) {
-      if (flow.graphData && flow.graphData.nodes) {
-        setNodes(flow.graphData.nodes);
-        setEdges(flow.graphData.edges);
+      if ((flow as any).graphData && (flow as any).graphData.nodes) {
+        setNodes((flow as any).graphData.nodes);
+        setEdges((flow as any).graphData.edges);
       } else {
         setNodes(initialNodes);
         setEdges(initialEdges);

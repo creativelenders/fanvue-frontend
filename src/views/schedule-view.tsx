@@ -66,10 +66,10 @@ export function ScheduleView() {
               <div key={schedule.id} className="flex items-center justify-between p-4 bg-glass-light border border-glass-border rounded-lg">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full bg-primary-cyan/20 flex items-center justify-center text-primary-cyan font-bold">
-                    {schedule.user?.name?.charAt(0) || "U"}
+                    {(schedule as any).user?.name?.charAt(0) || "U"}
                   </div>
                   <div>
-                    <p className="font-medium text-text-main">{schedule.user?.name || "Unknown Agent"}</p>
+                    <p className="font-medium text-text-main">{(schedule as any).user?.name || "Unknown Agent"}</p>
                     <p className="text-sm text-text-muted">
                       {dayNames[schedule.dayOfWeek]} · {schedule.startTime} to {schedule.endTime}
                     </p>

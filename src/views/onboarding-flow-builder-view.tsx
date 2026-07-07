@@ -99,8 +99,8 @@ export function OnboardingFlowBuilderView() {
   const { data: funnel, isLoading, error, refetch } = useOnboardingFunnel(workspaceId, id || "");
   const updateMutation = useUpdateOnboardingFunnel();
 
-  const [nodes, setNodes, onNodesChange] = useNodesState([]);
-  const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+  const [nodes, setNodes, onNodesChange] = useNodesState<any>([]);
+  const [edges, setEdges, onEdgesChange] = useEdgesState<any>([]);
 
   useEffect(() => {
     if (funnel) {

@@ -11,6 +11,16 @@ import type {
 import type { ApiSuccess, PaginatedResponse } from "../types/api";
 
 // ── Generate Content ──
+export function useContentStrategies() {
+  return useQuery({
+    queryKey: ["content-strategies"],
+    queryFn: async () => {
+      // Mock or fetch
+      return [] as any[];
+    },
+  });
+}
+
 export function useGenerateContent() {
   const queryClient = useQueryClient();
 

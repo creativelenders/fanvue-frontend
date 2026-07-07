@@ -55,7 +55,7 @@ export function ContentBrainView() {
                 onClick={() => {
                   if (!prompt.trim()) { toast.error("Please enter a prompt"); return; }
                   generateMutation.mutate(
-                    { prompt, type: "caption" },
+                    { prompt } as any,
                     {
                       onSuccess: () => {
                         toast.success("Content generated and saved successfully!");

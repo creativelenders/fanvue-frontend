@@ -1,7 +1,7 @@
 import { usePermissions } from "../../hooks/use-permissions";
 import { Lock } from "lucide-react";
 import { Link } from "react-router-dom";
-import type { PlanLimits } from "../../lib/permissions";
+
 
 interface PlanGateProps {
   feature?: keyof typeof import("../../lib/permissions").PLAN_LIMITS.free;

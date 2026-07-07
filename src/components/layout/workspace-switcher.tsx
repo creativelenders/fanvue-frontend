@@ -5,7 +5,6 @@ import { ChevronDown, Plus, Check } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { usePermissions } from "../../hooks/use-permissions";
 import { toast } from "sonner";
-import { toast } from "sonner";
 
 export function WorkspaceSwitcher() {
   const { currentWorkspace, workspaces, switchWorkspace } = useWorkspace();
