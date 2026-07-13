@@ -11,6 +11,7 @@ import { LoginView } from "./views/login-view";
 import { OnboardingView } from "./views/onboarding-view";
 import { DashboardView } from "./views/dashboard-view";
 import { ContentBrainView } from "./views/content-brain-view";
+import { PromotionOsView } from "./views/promotion-os-view";
 import { ChatView } from "./views/chat-view";
 import { PromptLibraryView } from "./views/prompt-library-view";
 import { MediaView } from "./views/media-view";
@@ -70,6 +71,7 @@ export function App() {
               >
                 {/* Overview */}
                 <Route path="/" element={<DashboardView />} />
+                <Route path="/promotion-os" element={<PromotionOsView />} />
 
                 {/* Create */}
                 <Route path="/content" element={<ContentBrainView />} />

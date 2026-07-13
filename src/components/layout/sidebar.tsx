@@ -23,6 +23,7 @@ import {
   ChevronDown,
   ChevronRight,
   Image,
+  Wand2,
 } from "lucide-react";
 import { useLogout } from "../../hooks/use-auth";
 import { useAuth } from "../../contexts/auth-context";
@@ -42,7 +43,10 @@ interface NavSection {
 const NAV_SECTIONS: NavSection[] = [
   {
     label: "Overview",
-    items: [{ to: "/", label: "Dashboard", icon: LayoutDashboard }],
+    items: [
+      { to: "/", label: "Dashboard", icon: LayoutDashboard },
+      { to: "/promotion-os", label: "AI Operator", icon: Wand2, badge: "NEW" },
+    ],
   },
   {
     label: "Create",
