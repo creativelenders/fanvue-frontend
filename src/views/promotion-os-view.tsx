@@ -10,8 +10,8 @@ import { toast } from "sonner";
 
 interface DashboardSummary { campaigns: number; media_jobs: number; pending_approvals: number; }
 interface Campaign { id: string; name: string; status: string; objective: string; }
-interface MediaJob { id: string; status: string; seed: number; }
-interface ApprovalItem { id: string; title: string; status: string; }
+interface MediaJob { id: string; status: string; seed: number; ppv_price_usd?: number; }
+interface ApprovalItem { id: string; title: string; status: string; kind?: string; }
 
 export function PromotionOsView() {
   const queryClient = useQueryClient();
